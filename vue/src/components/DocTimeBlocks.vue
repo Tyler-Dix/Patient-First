@@ -1,5 +1,9 @@
 <template>
 <body>
+    <div class="top-button">
+        <button type="submit" v-on:click="createAvailabilityRecords">Submit</button>
+        <button type="reset" v-on:click="resetOfficeTimeBlocks">Reset</button>
+    </div>   
     <div class="time-block-header">
         <h2> Set Your Availability </h2>
         <div class="default-duration">
@@ -300,6 +304,17 @@ h2{
     
 }
 
+.top-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: -12%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    
+}
+
 button{
   background-color: #614BC3;
   color: white;
@@ -308,6 +323,7 @@ button{
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 2px;
   border-style: none;
   border-radius: 3px;
   box-shadow: 0 3px 2px #0000001f, inset 0 0 1px #00000052;
